@@ -17,6 +17,7 @@ export default class ColumnChart {
       to: new Date(),
     }
   } = {}) {
+    console.log(url)
     this.url = new URL(url, BACKEND_URL);
 
     this.range = range;

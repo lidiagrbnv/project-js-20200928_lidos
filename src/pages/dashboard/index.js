@@ -55,6 +55,7 @@ export default class Page {
     });
 
     const ordersChart = new ColumnChart({
+      url: 'api/dashboard/orders',
       data: ordersData,
       label: 'orders',
       value: ordersData.reduce((accum, item) => accum + item, 0),
@@ -62,12 +63,14 @@ export default class Page {
     });
 
     const salesChart = new ColumnChart({
+      url: 'api/dashboard/sales',
       data: salesData,
       label: 'sales',
       value: '$' + salesData.reduce((accum, item) => accum + item, 0),
     });
 
     const customersChart = new ColumnChart({
+      url: 'api/dashboard/customers',
       data: customersData,
       label: 'customers',
       value: customersData.reduce((accum, item) => accum + item, 0),
