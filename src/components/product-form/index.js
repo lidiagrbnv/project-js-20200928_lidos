@@ -244,6 +244,7 @@ export default class ProductForm {
 
   setFormData() {
     const { productForm } = this.subElements;
+    if (!productForm) return
     const excludedFields = ['images'];
     const fields = Object.keys(this.defaultFormData).filter(item => !excludedFields.includes(item));
 
